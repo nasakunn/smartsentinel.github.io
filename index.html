@@ -1,1 +1,29 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Finder</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div id="search-container">
+        <input type="text" id="search-bar" placeholder="Search for parking...">
+    </div>
+    <div id="map"></div>
+    <div id="parking-details" class="hidden">
+        <h2>Parking Details</h2>
+        <p id="parking-info"></p>
+        <button id="view-spaces">View Available Spaces</button>
+        <button id="close-details" class="close-button">Close</button>
+    </div>
+    <div id="parking-lot-map" class="hidden">
+        <h2>Parking Lot Map</h2>
+        <div id="lot-map"></div>
+        <button id="close-lot-map" class="close-button">Close</button>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
