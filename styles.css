@@ -1,0 +1,149 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 1200px; /* Set a maximum width for the page */
+    margin: 0 auto; /* Center the page horizontally */
+    padding: 10px; /* Add some padding for mobile screens */
+    height: 100vh; /* Make the body take the full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Search container styling */
+#search-container {
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+/* Search bar styling */
+#search-bar {
+    width: 96.5%;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-bar:focus {
+    border-color: #6a11cb; /* Highlight border on focus */
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.3); /* Subtle shadow on focus */
+}
+
+/* Button styling */
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: #6a11cb; /* Solid color */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #2575fc; /* Change color on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+    transform: translateY(0); /* Reset on click */
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background-color: #ff4444; /* Solid color */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.close-button:active {
+    transform: translateY(0); /* Reset on click */
+}
+
+/* Parking details and parking lot map styling */
+#parking-details, #parking-lot-map {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    height: 40vh; /* Set height to 40% of viewport height */
+}
+
+.hidden {
+    display: none;
+}
+
+#lot-map {
+    height: 100%; /* Take full height of parent container */
+}
+
+/* Full-screen styling for parking lot map */
+#parking-lot-map.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#parking-lot-map.fullscreen #lot-map {
+    width: 100%;
+    height: 80%;
+    margin-right: 20px;
+}
+
+#parking-lot-map.fullscreen .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px; /* Rounded corners */
+    z-index: 1001;
+}
+
+#parking-lot-map.fullscreen .close-button:hover {
+    background-color: #cc0000;
+}
+
+/* Map container styling */
+#map {
+    z-index: 0;
+    position: relative;
+    height: 85vh; /* Set height to 20% of viewport height */
+    width: 100%; /* Full width */
+}
